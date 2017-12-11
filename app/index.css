@@ -2,7 +2,6 @@
   font-family is just a bunch of system fonts
   one of these fonts (or more) are going to be
   fonts that are already on users computer
-
 */
 
 body {
@@ -23,6 +22,7 @@ ul {
   what it does below is remove the bullet points 
   from our list.
 */
+
 li {
   list-style-type: none;
 }
