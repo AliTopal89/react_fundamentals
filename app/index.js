@@ -4,8 +4,6 @@ require('./index.css');
 // we just want index.js to require the main app
 var App = require('./components/App');
 
-// the way you set your UI for a specific component 
-//is with your render method
 
 //component definition
 
