@@ -46,7 +46,7 @@ function SelectLanguage (props) {
   )
 }
 
-// and now we require two proptypes that we require
+// and now we require two proptypes
 
 SelectLanguage.propTypes = {
   selectedLanguage: PropTypes.string.isRequired,
