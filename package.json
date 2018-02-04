@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/AliTopal89/react_fundamentals#readme",
   "dependencies": {
+    "axios": "^0.17.1",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
