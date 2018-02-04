@@ -1,32 +1,19 @@
-// npm install --save prop-types
+// componentDidMount - life cycle event.
+// componentDidMount is going to be invoked by React. This
+// is where you are going to be making any AJAX requests,
+// with our api object which we required. 
 
-// popular js is also going to render the grid with popular repositories
-// not only the popular languages component
-// with reafactoring we no longer have this.state.selectedLanguage 
-// and this.updateLanguage function on our instance anymore because
-// it lives in our Popular component
 
-// now when we render out selectLanguage so therefore we'll pass
-// selectedLanguage and onSelect as prop and now we have to require
-// propTypes. 
+// api.fetchPopularRepos(lang) = because that is the new language
+// that has been selected
 
-// where we are using languages array is in our SelectLanguage component
-// so we can pass it in as a prop but we are not using languages anywhere
-// else besides the SelectLanguage component
-
-// class SelectLanguage extends React.Component {}
-// if all your component has a render method.. instead of creating a class like above comment
-// you can just make a function also now with the function we don't have access
-// to "this." keyword anymore so instead we are going to pass it in props
-
-// in React whenever you have function like
-// "function SelectLanguage (props){}" its called stateles functional component
-// because it doesn't have a state and everything we are receiving is a prop
-// its just a function returning some UI
+// this.updateLanguage(this.state.selectedLanguage); - is going to 
+// be 'All' as thats what we specified. 
 
 
 var React = require('react');
-var PropTypes = require('prop-types'); // ES5 with npm
+var PropTypes = require('prop-types');
+var api = require('../utils/api');
 
 function SelectLanguage (props) {
   var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
@@ -46,7 +33,35 @@ function SelectLanguage (props) {
   )
 }
 
-// and now we require two proptypes
+function RepoGrid (props) {
+  return (
+    <ul className='popular-list'>
+      {props.repos.map(function (repo, index) {
+        return (
+          <li key={repo.name} className='popular-item'>
+            <div className='popular-rank'>#{index + 1}</div>
+            <ul className='space-list-items'>
+              <li>
+                <img
+                  className='avatar'
+                  src={repo.owner.avatar_url}
+                  alt={'Avatar for ' + repo.owner.login}
+                />
+              </li>
+              <li><a href={repo.html_url}>{repo.name}</a></li>
+              <li>@{repo.owner.login}</li>
+              <li>{repo.stargazers_count} stars</li>
+            </ul>
+          </li>
+        )
+      })}
+    </ul>
+  )
+}
+
+RepoGrid.propTypes = {
+  repos: PropTypes.array.isRequired,
+}
 
 SelectLanguage.propTypes = {
   selectedLanguage: PropTypes.string.isRequired,
@@ -58,24 +73,40 @@ class Popular extends React.Component {
     super();
     this.state = {
       selectedLanguage: 'All',
+      repos: null,
     };
 
     this.updateLanguage = this.updateLanguage.bind(this);
+  }
+  componentDidMount() {
+    this.updateLanguage(this.state.selectedLanguage)
   }
   updateLanguage(lang) {
     this.setState(function () {
       return {
         selectedLanguage: lang,
+        repos: null
       }
     });
+
+    api.fetchPopularRepos(lang)
+      .then(function (repos) {
+        this.setState(function () {
+          return {
+            repos: repos
+          }
+        });
+      }.bind(this));
   }
-  // <div> is for us to wrap everything we return from our selectLanguage function  
   render() {
     return (
       <div>
         <SelectLanguage
           selectedLanguage={this.state.selectedLanguage}
           onSelect={this.updateLanguage} />
+        {!this.state.repos
+          ? <p>LOADING!</p>
+          : <RepoGrid repos={this.state.repos} />}
       </div>
     )
   }
