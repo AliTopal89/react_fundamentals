@@ -10,6 +10,25 @@
 // this.updateLanguage(this.state.selectedLanguage); - is going to 
 // be 'All' as thats what we specified. 
 
+// .bind(this) is going to be same as "this" keyword as this.setState
+// in api.fetchPopularRepos.
+
+// in our UI to see the result of the repos we can pass in
+// {JSON.stringfy(this.state.repos, 2, null)} - to dumb in all our JSX.
+
+// function RepoGrid (props) - we are going to map over all our repos.
+
+// index + 1 cause index is going to start at 0.
+
+// repo.stargazers_count - how many stars the repo has. 
+
+// we are rendering <RepoGrid repos={this.state.repos}
+// even before we hit the github api which will cause an error.
+
+// if !this.state.repos - this.state.repos is falsey
+// show loading and if it is not falsey 
+// render our <RepoGrid repos={this.state.repos} - show our RepoGrid.
+
 
 var React = require('react');
 var PropTypes = require('prop-types');
