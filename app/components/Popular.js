@@ -14,7 +14,7 @@
 // in api.fetchPopularRepos.
 
 // in our UI to see the result of the repos we can pass in
-// {JSON.stringfy(this.state.repos, 2, null)} - to dumb in all our JSX.
+// {JSON.stringfy(this.state.repos, 2, null)} - to dump in all our JSX.
 
 // function RepoGrid (props) - we are going to map over all our repos.
 
@@ -28,6 +28,12 @@
 // if !this.state.repos - this.state.repos is falsey
 // show loading and if it is not falsey 
 // render our <RepoGrid repos={this.state.repos} - show our RepoGrid.
+
+// You should usually use componentDidMount over componentWillMount
+// In practice, componentDidMount is the best place to put calls to fetch data
+// Using DidMount makes it clear that data won’t be loaded until after the initial render
+// Putting the data loading code in componentDidMount will ensure 
+// that data is only fetched from the client.
 
 
 var React = require('react');
