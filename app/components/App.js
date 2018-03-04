@@ -1,5 +1,9 @@
 var React = require('react');
-var Popular = require('./Popular')
+var Popular = require('./Popular');
+var ReactRouter = require('react-router-dom');
+var Router = ReactRouter.BrowserRouter;
+var Route = ReactRouter.Route;
+var Nav = require('./Nav');
 
 // the way you set your UI for a specific component 
 //is with your render method
@@ -10,14 +14,20 @@ var Popular = require('./Popular')
 // class is already a reserved keyword in JS, because it 
 // already means something else. 
 
+// Now popular component will be rendered when we go to
+// "/popular" <Route path='/popular' component={Popular} />
+
 class App extends React.Component {
   render() {
   	return (
   		// what popular is rendering is the div that we created
   		// in Popular.js
-  	  <div className='container'>
-  	    <Popular />
-  	  </div>
+  	   <Router>
+	  	  <div className='container'>
+	  	    <Nav />
+	  	    <Route path='/popular' component={Popular} />
+	  	  </div>
+	   </Router>
 
   	)
   }
