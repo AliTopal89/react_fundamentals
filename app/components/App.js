@@ -22,7 +22,7 @@ var Battle = require('./Battle');
 
 // what "Switch" is going to do is instead of rendering all the
 // routes that are active, switch is going to render one specific
-// route, now is somebody goes to a path that isn't from the path's
+// route, now if somebody goes to a path that isn't from the path's
 // described React router is going to render "Not Found" 
 
 class App extends React.Component {

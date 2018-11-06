@@ -1,5 +1,5 @@
 // "this" keyword inside of handleSubmit function
-// awlays going to be refering our instance this.handleSubmit.bind("this" ~ instance)
+// always going to be refering our instance this.handleSubmit.bind("this" ~ instance)
 // which is the battle component
 // id -> playerOne/playerTwo
 
