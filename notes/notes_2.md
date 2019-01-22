@@ -1,3 +1,4 @@
+```
 // Popular Component
 // we want to show each of these languages to the view
 // map over all the languages and for each language in the array
@@ -63,6 +64,7 @@
 // what style={} does is that it allows you to inline any styles that the list component has. 
 // so if lang, which is the language we are iterating over equals whatever language is selected, then
 // go ahead and the make the style with an object with that red color and if not go ahead and do nothing.  
+```
 
 ```js
 
