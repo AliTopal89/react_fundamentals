@@ -109,5 +109,5 @@ class Popular extends React.Component {
 }
 ```
 
-// we need to export it as well like we did in App.js
-module.exports = Popular;
+```// we need to export it as well like we did in App.js
+module.exports = Popular;```
