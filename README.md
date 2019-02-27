@@ -18,4 +18,6 @@ after this step I was able to install the package
 
  or you can use this [link](https://github.com/babel/babel-sublime/issues/327) to figure out the problem that you might be having. 
 
- axios is promise based hhtp client, this is what we are going to use send http request to our gihub api
+ axios is promise based http client, this is what we are going to use send http request to our github api
+
+ notes can be found [here](notes) from the class tutorials
