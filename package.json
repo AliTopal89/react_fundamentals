@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/AliTopal89/react_fundamentals#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "elliptic": "^6.5.3",
     "js-yaml": ">=3.13.1",
     "lodash": "^4.17.19",
