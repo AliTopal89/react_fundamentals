@@ -21,3 +21,9 @@ after this step I was able to install the package
  axios is promise based http client, this is what we are going to use send http request to our github api
 
  notes can be found [here](notes) from the class tutorials
+
+### Workarounds for global installations
+
+`Error: EACCES: permission denied, rename '/usr/local/lib/node_modules/npm'`
+fixed by
+`sudo chown -R $USER /usr/local/lib/node_modules`
