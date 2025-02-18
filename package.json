@@ -25,7 +25,7 @@
   "dependencies": {
     "@babel/core": "^7.23.2",
     "axios": ">=0.28.0",
-    "elliptic": "^6.5.4",
+    "elliptic": "^6.6.1",
     "follow-redirects": ">=1.15.6",
     "js-yaml": ">=3.13.1",
     "json5": "^2.2.3",
