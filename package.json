@@ -24,7 +24,7 @@
   "homepage": "https://github.com/AliTopal89/react_fundamentals#readme",
   "dependencies": {
     "@babel/core": "^7.23.2",
-    "axios": ">=0.28.0",
+    "axios": ">=1.8.2",
     "elliptic": "^6.6.1",
     "follow-redirects": ">=1.15.6",
     "js-yaml": ">=3.13.1",
