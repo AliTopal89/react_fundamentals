@@ -29,7 +29,7 @@
     "follow-redirects": ">=1.15.6",
     "js-yaml": ">=4.1.1",
     "json5": "^2.2.3",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.23",
     "node-forge": "^1.3.2",
     "postcss": "^8.4.6",
     "prop-types": "^15.7.2",
