@@ -36,7 +36,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^7.5.2",
-    "serialize-javascript": "^7.0.4",
+    "serialize-javascript": "^7.0.5",
     "set-value": ">=4.0.1",
     "url-parse": ">=1.5.2"
   },
