@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/AliTopal89/react_fundamentals#readme",
   "dependencies": {
-    "@babel/core": "^7.23.2",
+    "@babel/core": "^8.0.1",
     "axios": ">=1.18.0",
     "elliptic": "^6.6.1",
     "follow-redirects": ">=1.16.0",
@@ -41,9 +41,9 @@
     "url-parse": ">=1.5.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.2",
-    "babel-loader": "^8.1.0",
-    "@babel/preset-env": "^7.23.2",
+    "@babel/core": "^8.0.1",
+    "babel-loader": "^10.1.1",
+    "@babel/preset-env": "^8.0.2",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^7.1.4",
     "fsevents": "^2.1.3",
